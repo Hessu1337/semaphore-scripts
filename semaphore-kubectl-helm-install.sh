@@ -38,9 +38,9 @@ if [ ! -e $SEMAPHORE_CACHE_DIR/helm ]
 then
     echo "helm not found in cache, downloading..."
     mkdir $SEMAPHORE_CACHE_DIR/helm
-    wget https://storage.googleapis.com/kubernetes-helm/helm-v2.10.0-linux-amd64.tar.gz
+    wget https://get.helm.sh/helm-v3.1.3-linux-amd64.tar.gz
     echo "Saving helm to cache..."
-    tar -zxf helm-v2.10.0-linux-amd64.tar.gz --directory $SEMAPHORE_CACHE_DIR/helm
+    tar -zxf helm-v3.1.3-linux-amd64.tar.gz --directory $SEMAPHORE_CACHE_DIR/helm
     sudo chmod +x $SEMAPHORE_CACHE_DIR/helm/linux-amd64/helm
 fi
 echo "Using helm from cache..."
